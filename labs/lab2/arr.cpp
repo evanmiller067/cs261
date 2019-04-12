@@ -20,5 +20,39 @@ int sum(node * head[])
 int removeTwo(node * head[])
 {
 	//remove all 2's from table, return table
+	node * curr;
+	node * previous;
 	
+	for(int i = 0; i < SIZE; i++)
+	{
+		previous = nullptr;
+		curr = head[i];
+		
+		while(curr)
+		{
+			if(curr->data == 2)
+			{
+				if(!previous)
+				{
+					head[i] = head[i]->next;
+					delete curr;
+					curr = head[i];
+					removed++;
+				}
+				else
+				{
+					previous->next = curr->next;
+					delete curr;
+					curr = previous->next;
+					removed++;
+				}
+			}
+			else
+			{
+				previous = curr;
+				curr = curr->next;
+			}
+		}
+	}
+	return removed;
 }
