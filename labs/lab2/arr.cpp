@@ -14,7 +14,7 @@ int sum(node * head[])
 			curr = curr->next;
 		}
 	}
-	delete surr;
+	delete curr;
 	return sum;
 }
 int removeTwo(node * head[])
@@ -22,6 +22,7 @@ int removeTwo(node * head[])
 	//remove all 2's from table, return table
 	node * curr;
 	node * previous;
+	int removed = 0;
 	
 	for(int i = 0; i < SIZE; i++)
 	{

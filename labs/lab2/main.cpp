@@ -9,8 +9,8 @@ int main()
 
     //PLEASE PUT YOUR CODE HERE to call the function assigned
 	cout << "Sum of all intergers: " << sum(head) << endl;
-	cout << "after a removing all 2's: " << removeTwo(head);
-
+	cout << "Number of Two's removed: " << removeTwo(head) << endl;
+	cout << "Table after removal: " << endl;
 
     display(head);
     destroy(head);
