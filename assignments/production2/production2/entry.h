@@ -21,7 +21,7 @@ class entry
 	
 		entry(const entry &oneEntry);
 		entry & operator=(const entry &oneEntry);
-		int getyear();
+		int getYear();
 		int getMonth();
 		int getDay();
 		int getAmount();

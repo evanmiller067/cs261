@@ -2,6 +2,10 @@
 #define YEARDATA_H
 #include <map>
 #include<string>
+#include "stationdata.h"
+class productiondb;
+class monthdata;
+
 class yeardata
 {
 	public:
@@ -12,7 +16,7 @@ class yeardata
 	private:
 		int resourceCount;
 		typedef std::map<std::string, stationdata*> stationMap;
-		stationdata stations;
+		stationMap stations;
 		stationMap::const_iterator getProductionBegin() const {return stations.cbegin();};
 		stationMap::const_iterator getProductionEnd() const {return stations.cend();};
 		friend class productiondb;

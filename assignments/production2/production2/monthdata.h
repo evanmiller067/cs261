@@ -2,12 +2,18 @@
 #define MONTHDATA_H
 #include<map>
 #include<string>
+#include "entry.h"
+
 class resource;
+class yeardata;
+class productiondb;
+class stationdata;
+
 
 class monthdata
 {
 	private:
-		int totalResource;
+		int monthTotalResource;
 		typedef std::map<std::string, resource*> aMap;
 		aMap resources;
 		aMap::const_iterator getBegin() const {return resources.cbegin();};
@@ -17,6 +23,6 @@ class monthdata
 		monthdata(int totalResource = 0) : monthTotalResource(totalResource) {};
 		~monthdata();
 		bool addEntry(entry &oneEntry);
-		int getTotalResource() const {return totalResource;};
+		int getTotalResource() const {return monthTotalResource;};
 };
 #endif

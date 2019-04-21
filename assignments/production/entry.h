@@ -11,6 +11,7 @@ class entry
 		std::string station;
 		std::string resource;
 	public:
-		
+		entry(int, int, int, int, std::string, std::string);
+		~entry();
 };
 #endif

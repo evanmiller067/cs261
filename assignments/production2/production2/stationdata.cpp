@@ -1,11 +1,10 @@
 #include "stationdata.h"
 bool stationdata::addResource(entry &oneEntry)
 {
-	int month = oneEntry/getMonth();
+	int month = oneEntry.getMonth();
 	stationResourceCount += oneEntry.getAmount();
-	stationMap::iterator exact;
-	exact = months.find(month);
-	
+	std::map<int, monthdata*>::iterator exact = months.find(month);
+
 	if(exact == months.end())
 	{
 		monthdata * newMonth = new monthdata();
@@ -20,8 +19,8 @@ bool stationdata::addResource(entry &oneEntry)
 }
 stationdata::~stationdata()
 {
-	for(aMap::iterator i = months.begin(); i != months.end(); ++i)
+	for(auto it = months.begin(); it != months.end(); ++it)
 	{
-		delete i->second;
+		delete it->second;
 	}
 }

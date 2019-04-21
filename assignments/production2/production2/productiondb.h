@@ -12,13 +12,13 @@ class productiondb
 	public:
 		productiondb() {};
 		~productiondb();
-		bool addData(entry %oneEntry);
+		bool addData(entry &oneEntry);
 
 	private:
 		typedef std::map<int, yeardata*> yearMap;
 		yearMap years;
-		yearMap::const_iterator getProductionBegin() const {return years.cbegin()};
-		yearMap::const_iterator getProductionEnd() sonst {return years.cend()};
+		yearMap::const_iterator getProductionBegin() const {return years.cbegin();};
+		yearMap::const_iterator getProductionEnd() const {return years.cend();};
 };
 
 #endif
