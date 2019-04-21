@@ -3,7 +3,7 @@
 #include<map>
 #include<string>
 #include "entry.h"
-
+#include "resourcecount.h"
 class resource;
 class yeardata;
 class productiondb;

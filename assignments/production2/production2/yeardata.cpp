@@ -2,9 +2,7 @@
 bool yeardata::addData(entry &oneEntry)
 {
 	resourceCount += oneEntry.getAmount();
-	std::string aStation = oneEntry.getStationName;
-//	station::iterator exact;
-//	exact = stations.find(aStation);
+	std::string aStation = oneEntry.getStationName();
 	std::map<std::string, stationdata*>::iterator exact = stations.find(aStation);
 
 	if(exact == stations.end())
