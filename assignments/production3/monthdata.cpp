@@ -9,7 +9,7 @@ bool monthdata::addEntry(entry & oneEntry)
 
 	if (exact == resources.end())
 	{
-		resource *newResource = new resource(resourceName);
+		resourcecount *newResource = new resourcecount(resourceName);
 		newResource->addResource(oneEntry);
 		return resources.insert(std::make_pair(resourceName, newResource)).second;
 	}
@@ -22,7 +22,7 @@ bool monthdata::addEntry(entry & oneEntry)
 monthdata::~monthdata()
 {
 	for (auto it = resources.begin(); it != resources.end(); ++it)
-	{	
+	{
 		delete it->second;
 	}
 }

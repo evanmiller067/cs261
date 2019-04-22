@@ -7,10 +7,14 @@
 class productiondb
 {
 	private:
-		std::map<std::string stationName, stationdata*> stationMap;
+		typedef std::map<std::string stationName, stationdata*> stationMap;
+		stationMap stations;
 	public:
 		void addData(entry&);
+		stationMap::const_iterator getStationBegin() const {return stations.cbegin();}
+		stationMap::const_terator getStationEnd() const {return stations.cend();}
 		~productiondb();
+		
 };
 class stationdata()
 {

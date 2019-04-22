@@ -12,7 +12,7 @@ class monthdata
 {
 	private:
 		int monthTotalResource;
-		typedef std::map<std::string,int resource*> aMap;
+		typedef std::map<std::string, resourcecount*> aMap;
 		aMap resources;
 		aMap::const_iterator getBegin() const {return resources.cbegin();};
 		aMap::const_iterator getEnd() const {return resources.cend();};
