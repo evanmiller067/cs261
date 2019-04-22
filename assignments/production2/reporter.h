@@ -8,7 +8,7 @@ class reporter
 {
 	public:
 		//functions called by showreport.cpp
-		void printFullReport(int); //might not be void
-		void printStationReport(int); //might not be void
+		void printFullReport(int); 
+		void printStationReport(int); 
 };
 #endif

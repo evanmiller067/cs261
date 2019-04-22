@@ -1,10 +1,11 @@
 #include "monthdata.h"
+#include "resourcecount.h"
 
 bool monthdata::addEntry(entry & oneEntry)
 {
 	std::string resourceName = oneEntry.getResourceName();
 	aMap::iterator exact = resources.find(resourceName);
-	monthTotalResource += oneEntry.getAmount;
+	monthTotalResource += oneEntry.getAmount();
 
 	if (exact == resources.end())
 	{
@@ -20,8 +21,8 @@ bool monthdata::addEntry(entry & oneEntry)
 }
 monthdata::~monthdata()
 {
-	for (aMap::iterator i = resources.begin(); i != resources.end(); ++i)
+	for (auto it = resources.begin(); it != resources.end(); ++it)
 	{	
-		delete i->second;
+		delete it->second;
 	}
 }

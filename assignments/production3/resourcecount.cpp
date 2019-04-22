@@ -16,8 +16,12 @@ bool resourcecount::addResource(entry &oneEntry)
 }
 resourcecount::~resourcecount()
 {
-	for(aMap:;iterator i = dayResource.begin(); i != dayResource.end(); ++i)
+	for(auto i = dayResource.begin(); i != dayResource.end(); ++i)
 	{
 		delete i->second;
 	}
+}
+int resourcecount::getTotalResource()
+{
+	return resource;	
 }

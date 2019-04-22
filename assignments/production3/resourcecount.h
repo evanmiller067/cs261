@@ -2,6 +2,7 @@
 #define RESOURCECOUNT_H
 #include <string>
 #include <map>
+class entry;
 class monthdata;
 class yeardata;
 class stationdata;
@@ -20,6 +21,6 @@ class resourcecount
 		resourcecount(std::string rescName = " ") : resourceAmount(0), resourceName(rescName) {};
 		~resourcecount();
 		bool addResource(entry &oneEntry);
-		int getTotalResource() const {return resourceAmount;};
+		int getTotalResource() const;
 };
 #endif
