@@ -6,6 +6,11 @@
 
 class resourcecount
 {
+public:
+//	resourcecount(std::string rescName = " ") : resourceAmount(0), resourceName(rescName) {};
+	~resourcecount();
+	bool addResource(entry &oneEntry);
+	int getTotalResource() const {return resourceAmount;}
 private:
 	std::string resourceName;
 	int resourceAmount;
@@ -14,11 +19,6 @@ private:
 	entryMap::const_iterator getBegin() const { return dayResource.cbegin(); };
 	entryMap::const_iterator getEnd() const { return dayResource.cend(); };
 	friend class productiondb;
-public:
-	resourcecount(std::string rescName = " ") : resourceAmount(0), resourceName(rescName) {};
-	~resourcecount();
-	bool addResource(entry &oneEntry);
-	int getTotalResource() const;
 };
 class monthdata
 {
@@ -45,8 +45,8 @@ private:
 	resourceMap::const_iterator getBegin() const { return months.cbegin(); };
 	resourceMap::const_iterator getEnd() const { return months.cend(); };
 public:
-	stationdata() : stationName(" "), stationResourceCount(0) {};
-	stationdata(std::string nameOfStation) : stationName(nameOfStation) {};
+//	stationdata() : stationName(" "), stationResourceCount(0) {};
+//	stationdata(std::string nameOfStation) : stationName(nameOfStation) {};
 	~stationdata();
 	bool addResource(entry &oneEntry);
 	int getResource() const { return stationResourceCount; };
