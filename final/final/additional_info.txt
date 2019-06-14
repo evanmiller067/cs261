@@ -1,0 +1,40 @@
+This file contains additional information about the exam to help clarify some
+questions.
+
+** main() **
+
+- Make sure that you update the main() function so that it uses both of the
+  functions (copyToArray, copyNonLeaf).
+- Make sure that the output of your program is clear so I can tell where you
+  are printing the output of each function.
+- Make sure you do any memory cleanup that you need to do to avoid memory
+  leaks.
+
+** copyToArray(node* root,int intArray[]) **
+
+- You don't know the size of the array. You have to dynamically allocate the
+  array. You will also need to make sure that you deallocate the array in your
+  main when you're done printing the array. You need to do this to avoid
+  memory leaks.
+
+** copyNonLeaf(node* root, node*& newRoot) **
+
+- You will be creating a new tree that has newRoot as the root. You will have
+  to dynamically create this new tree. 
+- The new tree will contain all of the non-leaf nodes from the original
+  tree. For example, if the original tree is:
+  
+      5
+     / \
+    3   8
+   / \ / \
+  1  46   9
+
+  The new tree will be:
+
+      5
+     / \
+    3   8
+
+- Make sure that the new tree is a BST.
+

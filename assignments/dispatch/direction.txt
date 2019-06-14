@@ -1,0 +1,19 @@
+each stations can only handle 20 requests per day, high priority has to be fixed the day it comes in, each station can only do three dispatches a day, unless they are high priority. 
+
+dispatchManager
+	
+	-reads in 20 lines from input text file
+	
+	-parses line for station, type of emergency(enumerated type) 
+	
+	priority list:
+		- vehicle problems: accidents are high priority, everything else is low
+		- facility problems: everything is low
+		- medical problems: breathing problems and seizures are high, everything
+		  else is medium
+		- environment problems: all are high
+
+	***read through requests to determine keywords to associate with each problem.
+
+	
+
